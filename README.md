@@ -1,6 +1,6 @@
 # My dotfiles
 
-Repository of shared config for programs I use everyday.
+Repository of config files for programs I use everyday.
 
 ## Installation
 

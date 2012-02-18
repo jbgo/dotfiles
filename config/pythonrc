@@ -1,0 +1,30 @@
+import atexit
+import os
+import re
+import readline
+import rlcompleter
+import sys
+import time
+import timeit
+
+try:
+  history = '/Users/jordan/.python_history' # Python2.5 compatibility
+  readline.read_history_file(history)
+  readline.parse_and_bind('tab: complete')
+  atexit.register(readline.write_history_file, history)
+except:
+  print "readline not available"
+
+def t(*args):
+    return timeit.Timer(*args).timeit()
+
+def syspath():
+    print '\n'.join(sys.path)
+
+def m(o, filter=lambda x: True):
+    """prints entries in dir() with an optionial filter function"""
+    print '\n'.join(sorted([x for x in dir(o) if filter(x)]));
+
+def pj(list_):
+    """joins a list with newlines and prints it"""
+    print '\n'.join(list_)

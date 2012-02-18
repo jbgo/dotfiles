@@ -1,0 +1,21 @@
+require 'rubygems'
+
+# List methods of an object and optionally filter by pattern
+def show_methods(o, pattern=//, options={})
+  options = { :include_super => true, :kind => :methods }.merge(options)
+  o.send(options[:kind], options[:include_super]).select do |method|
+    method.to_s =~ pattern
+  end
+end
+alias :m :show_methods
+
+# Print formatted column names and type info for ActiveRecord models
+def fields(model)
+  puts "Columns for '#{model.table_name}'"
+  width = model.columns.inject(0) { |max_width, col| col.name.size > max_width ? col.name.size : max_width }
+  _columns = model.columns.collect do |c|
+    "  %-#{width + 2}s :%s" % [c.name, c.type]
+  end.join("\n")
+  puts _columns
+end
+alias :c :fields

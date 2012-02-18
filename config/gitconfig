@@ -1,0 +1,37 @@
+[alias]
+  a = add
+  b = branch -a --color
+  bd = branch -d
+  bdd = branch -D
+  c = commit
+  ca = commit --amend
+  cb = checkout -b
+  cm = commit -m
+  co = checkout
+  c- = checkout -- .
+  d = diff --color
+  dc = diff --color --cached
+  g = gc
+  l = log --color
+  ld = log -p --color
+  ls = log --stat --color
+  lp = log --color --pretty=oneline
+  m = merge
+  p = push
+  pn = remote prune origin
+  ra = rebase --abort
+  rb = rebase master
+  rc = rebase --continue
+  rs = reset HEAD .
+  rsh = reset --hard HEAD
+  s = status
+  u = pull
+  undo = reset --soft HEAD^
+  who = shortlog -s
+
+[user]
+  name = Jordan Bach
+  email = jordanbach@gmail.com
+
+[core]
+  excludesfile = ~/.gitignore

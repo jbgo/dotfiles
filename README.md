@@ -5,7 +5,7 @@ Repository of config files for programs I use everyday.
 ## Installation
 
 ```sh
-git clone /jbgo/dotfiles.git ~/dotfiles
+git clone git://github.com/jbgo/dotfiles.git ~/dotfiles
 source ~/dotfiles/install.sh
 ```
 

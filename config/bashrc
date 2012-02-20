@@ -1,8 +1,9 @@
 export EDITOR=vim
 
 alias dotfiles='cd ~/dotfiles'
-alias bashrc="$EDITOR ~/dotfiles/bashrc"
+alias bashrc="$EDITOR ~/dotfiles/config/bashrc"
 alias bashr=bashrc
+alias bashrl="$EDITOR ~/dotfiles/local/bashrc"
 alias rebash='source ~/.bashrc'
 
 source ~/dotfiles/config/bash/aliases.bash

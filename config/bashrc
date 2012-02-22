@@ -12,6 +12,12 @@ source ~/dotfiles/config/bash/git.bash
 source ~/dotfiles/config/bash/rails.bash
 source ~/dotfiles/config/bash/python.bash
 
+# Display memory usage summary for a running process, refreshes every second.
+# usage: memwatch pid
+function memwatch() {
+  watch -n 1 "vmmap $1 | tail -30"
+}
+
 # Source local/private customizations
 # .gitignore contains an entry for dotfiles/local/
 [[ -s ~/dotfiles/local/bashrc ]] && source ~/dotfiles/local/bashrc

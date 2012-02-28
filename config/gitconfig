@@ -4,9 +4,11 @@
   bd = branch -d
   bdd = branch -D
   c = commit
+  cnv = commit --no-verify
   ca = commit --amend
   cb = checkout -b
   cm = commit -m
+  cmnv = commit --no-verify -m
   co = checkout
   c- = checkout -- .
   d = diff --color

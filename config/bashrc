@@ -12,6 +12,12 @@ source ~/dotfiles/config/bash/git.bash
 source ~/dotfiles/config/bash/rails.bash
 source ~/dotfiles/config/bash/python.bash
 
+# Shortcut for symlinking a new dotfile after install
+# usage: dotlink inputrc
+function dotlink() {
+  ln -s ~/dotfiles/config/$1 ~/.$1
+}
+
 # Display memory usage summary for a running process, refreshes every second.
 # usage: memwatch pid
 function memwatch() {

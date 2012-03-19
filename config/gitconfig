@@ -11,6 +11,7 @@
   cmnv = commit --no-verify -m
   co = checkout
   c- = checkout -- .
+  cpx = cherry-pick -x
   d = diff --color
   dc = diff --color --cached
   g = gc
@@ -37,3 +38,5 @@
 
 [core]
   excludesfile = ~/.gitignore
+[push]
+	default = upstream

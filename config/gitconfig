@@ -1,6 +1,7 @@
 [alias]
   a = add
-  b = branch -a --color
+  b = branch
+  ba = branch -a --color
   bd = branch -d
   bdd = branch -D
   c = commit

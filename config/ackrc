@@ -2,3 +2,4 @@
 --type-set=js=.js,.coffee
 --type-add=html=.erb,.tmpl,.haml
 --type-add=ruby=.haml,.rake,.rabl
+--type-add=css=.sass

@@ -10,6 +10,9 @@ alias password='head /dev/random | md5' # generate a random password
 alias g='git'
 alias sg='sudo git'
 
+# ssh
+alias ssh-hosts='grep -E "^Host [a-zA-Z]" ~/.ssh/config'
+
 # mac os x
 alias vf='open -a Finder .' # view current directory in Finder
 

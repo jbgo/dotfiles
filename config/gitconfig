@@ -18,8 +18,9 @@
   g = gc
   l = log --color
   ld = log -p --color
-  ls = log --stat --color
   lp = log --color --pretty=oneline
+  ls = log --stat --color
+  lsw = log --stat=800,400 --color
   m = merge
   p = push
   pn = remote prune origin

@@ -26,3 +26,24 @@ git, so your passwords or proprietary information won't end up on github!
 
 TODO: create a cron job that commits local changes and pulls/pushes
 changes from/to github.
+
+
+## Quickly editing your bash config
+
+Open `.bashrc` in your `$EDITOR` of choice.
+
+```
+bashr
+```
+
+List available sub-configs.
+
+```
+bashrl
+```
+
+Edit a sub-config.
+
+```
+bashrl aliases
+```

@@ -3,9 +3,23 @@ export NODE_PATH=/usr/local/lib/node_modules
 
 alias dotfiles='cd ~/dotfiles'
 alias bashrc="$EDITOR ~/dotfiles/config/bashrc"
-alias bashr=bashrc
 alias bashrl="$EDITOR ~/dotfiles/local/bashrc"
 alias rebash='source ~/.bashrc'
+
+function bashr() {
+  if [ "$1" == "list" ]; then
+    ls -1 ~/dotfiles/config/bash/*.bash
+  elif [ $1 ]; then
+    if [ -e ~/dotfiles/config/bash/$1.bash ]; then
+      $EDITOR ~/dotfiles/config/bash/$1.bash
+    else
+      echo "Bash config for '$1' does not exist"
+      ls -1 ~/dotfiles/config/bash/*.bash
+    fi
+  else
+    bashrc
+  fi
+}
 
 source ~/dotfiles/config/bash/aliases.bash
 source ~/dotfiles/config/bash/vim.bash

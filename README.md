@@ -39,11 +39,11 @@ bashr
 List available sub-configs.
 
 ```
-bashrl
+bashr
 ```
 
 Edit a sub-config.
 
 ```
-bashrl aliases
+bashr aliases
 ```

@@ -8,5 +8,10 @@ function mvim() {
   fi
 }
 
+function open_gem() {
+  mvim `bundle show $1`
+}
+alias og=open_gem
+
 # clear out pesky vim swap files
 alias rm.swp='echo "removing vim .swp files"; rm ~/.vim/backup/*.swp'

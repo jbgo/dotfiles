@@ -1,5 +1,6 @@
 alias rr="touch tmp/restart.txt; echo 'restarted rails'" # restart a rails app
 alias log='tail -f log/development.log' # show the development log for a rails app
+alias loga="tail -f log/development.log | grep -vE '(Served asset|Started GET ./assets|^$)'"
 alias what?='tail -n 250 log/development.log'
 alias dbmigrate='bx rake db:migrate; bx rake db:test:load'
 alias dbredo='bx rake db:migrate:redo; bx rake db:test:load'

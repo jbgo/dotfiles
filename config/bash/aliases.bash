@@ -10,6 +10,8 @@ alias readme='redcarpet README.md > readme.html; open readme.html'
 # git
 alias g='git'
 alias sg='sudo git'
+alias cleanwd='rm $(g ls-files -o)' # remove untracked files from working dir
+alias grmd='g rm $(g ls-files -d)' # stage all deleted files
 
 # ssh
 alias ssh-hosts='grep -E "^Host [a-zA-Z]" ~/.ssh/config'

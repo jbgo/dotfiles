@@ -47,3 +47,8 @@ Edit a sub-config.
 ```
 bashr aliases
 ```
+
+## Adding dotfiles for other programs
+
+1. Create the file (without a dot) in `~/dotfiles/config/`
+2. Run `source ~/dotfiles/update.sh`

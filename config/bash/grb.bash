@@ -1,5 +1,5 @@
 # Basic git_remote_branch replacement for systems without a ruby installation
-which grb
+which grb 1>/dev/null
 if [[ $? = 1 ]]; then
   function grb() {
     case $1 in

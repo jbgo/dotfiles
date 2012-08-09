@@ -49,3 +49,4 @@ function memwatch() {
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm  # This loads RVM into a shell session.
 [[ -s /usr/local/sbin ]] && export PATH=$PATH:/usr/local/sbin
 [[ -s $HOME/bin ]] && export PATH=$HOME/bin:$PATH
+export PATH=/usr/local/bin:$PATH

@@ -5,7 +5,7 @@ alias grepr='grep -d recurse -n' # recursive grep with line numbers
 alias grepo='grep -R -h -o -E' # recursive grep with only matching text printed
 alias lsenv='printenv | ack -i' # search for strings in environment variables
 alias password='head /dev/random | md5' # generate a random password
-alias readme='redcarpet README.md > readme.html; open readme.html'
+alias readme='test -x `which redcarpet` && test -f ./README.md && redcarpet README.md > ~/.Trash/readme.html && open ~/.Trash/readme.html'
 
 # git
 alias g='git'

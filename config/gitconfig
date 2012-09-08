@@ -40,5 +40,3 @@
 
 [core]
   excludesfile = ~/.gitignore
-[push]
-	default = upstream

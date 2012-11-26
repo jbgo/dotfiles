@@ -5,7 +5,7 @@ alias grepr='grep --color -d recurse -n' # recursive grep with line numbers
 alias grepo='grep -R -h -o -E' # recursive grep with only matching text printed
 alias lsenv='printenv | ack -i' # search for strings in environment variables
 alias password='head /dev/random | md5' # generate a random password
-alias readme='test -x `which redcarpet` && test -f ./README.md && redcarpet README.md > ~/.Trash/readme.html && open ~/.Trash/readme.html'
+alias readme='test -x `which redcarpet` && test -f ./README.md && redcarpet --render-fenced_code_blocks --render-no_intra_emphasis --render-autolink README.md > ~/.Trash/readme.html && open ~/.Trash/readme.html'
 alias pjson='python -mjson.tool'
 alias vb='VBoxManage'
 
@@ -25,7 +25,7 @@ alias vf='open -a Finder .' # view current directory in Finder
 # ruby
 alias bx='bundle exec'
 alias guard='bx guard -c'
-alias sp='bx rspec'
+alias sp='bx rspec --color'
 alias cuke='bx cucumber'
 
 # apache

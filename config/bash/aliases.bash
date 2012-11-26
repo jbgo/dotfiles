@@ -6,6 +6,7 @@ alias grepo='grep -R -h -o -E' # recursive grep with only matching text printed
 alias lsenv='printenv | ack -i' # search for strings in environment variables
 alias password='head /dev/random | md5' # generate a random password
 alias readme='redcarpet README.md > readme.html; open readme.html'
+alias vb='VBoxManage'
 
 # git
 alias g='git'

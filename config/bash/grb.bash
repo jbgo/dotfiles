@@ -28,5 +28,6 @@ _complete_grb_remote() {
   _completion_list $branches
 }
 
-complete -F _complete_grb_remote grb track
+alias grbt='grb track'
+complete -F _complete_grb_remote grbt
 complete -F _complete_grb grb

@@ -7,6 +7,7 @@ alias lsenv='printenv | ack -i' # search for strings in environment variables
 alias password='head /dev/random | md5' # generate a random password
 alias readme='test -x `which redcarpet` && test -f ./README.md && redcarpet README.md > ~/.Trash/readme.html && open ~/.Trash/readme.html'
 alias pjson='python -mjson.tool'
+alias vb='VBoxManage'
 
 # git
 alias g='git'

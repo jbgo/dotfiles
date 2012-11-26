@@ -19,3 +19,12 @@ def fields(model)
   puts _columns
 end
 alias :c :fields
+
+def print_with_map(collection)
+  if block_given?
+    puts collection.map(&Proc.new).join("\n")
+  else
+    puts collection.map(&:to_s).join("\n")
+  end
+end
+alias :pm :print_with_map

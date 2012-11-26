@@ -1,30 +1,3 @@
-# Basic git_remote_branch replacement for systems without a ruby installation
-which grb 1>/dev/null
-if [[ $? = 1 ]]; then
-  function grb() {
-    case $1 in
-    publish )
-      for cmd in "git push origin $2:refs/heads/$2" "git fetch origin" "git branch --set-upstream $2 origin/$2" "git checkout $2"; do
-        echo $cmd
-        `$cmd`
-      done
-      ;;
-    track )
-      for cmd in "git fetch origin" "git branch --set-upstream $2 origin/$2"; do
-        echo $cmd
-        `$cmd`
-      done
-      ;;
-    destroy )
-      for cmd in "git push origin :refs/heads/$2" "git branch -d $2"; do
-        echo $cmd
-        `$cmd`
-      done
-      ;;
-    esac
-  }
-fi
-
 # bash command-line completion
 
 function parse_git_dirty {

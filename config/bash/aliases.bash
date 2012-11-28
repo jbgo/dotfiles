@@ -8,6 +8,7 @@ alias password='head /dev/random | md5' # generate a random password
 alias readme='test -x `which redcarpet` && test -f ./README.md && redcarpet --render-fenced_code_blocks --render-no_intra_emphasis --render-autolink README.md > ~/.Trash/readme.html && open ~/.Trash/readme.html'
 alias pjson='python -mjson.tool'
 alias vb='VBoxManage'
+alias cpkey='cat ~/.ssh/id_rsa.pub | pbcopy'
 
 # git
 alias g='git'

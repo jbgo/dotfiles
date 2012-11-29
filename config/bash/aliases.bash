@@ -9,6 +9,7 @@ alias readme='test -x `which redcarpet` && test -f ./README.md && redcarpet --re
 alias pjson='python -mjson.tool'
 alias vb='VBoxManage'
 alias cpkey='cat ~/.ssh/id_rsa.pub | pbcopy'
+alias til='grep -d recurse -h `date "+%m/%d"` /usr/share/calendar/'
 
 # git
 alias g='git'

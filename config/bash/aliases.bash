@@ -29,6 +29,6 @@ alias guard='bx guard -c'
 alias sp='bx rspec --color'
 alias cuke='bx cucumber'
 
-# apache
-alias rs='sudo apachectl restart'
-alias vhosts='sudo vi /etc/apache2/extra/httpd-vhosts.conf'
+# nginx
+alias rs='echo "Stopping nginx..."; pgrep nginx; for pid in $(pgrep nginx); do sudo kill $pid; done; echo "Starging nginx..."; sudo launchctl start org.nginx; sleep 1; pgrep nginx'
+alias vhosts='sudo vi /opt/nginx/conf/nginx.conf'

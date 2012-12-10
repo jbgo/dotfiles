@@ -1,4 +1,4 @@
-alias rr="touch tmp/restart.txt; echo 'restarted rails'" # restart a rails app
+alias rr="mkdir -p tmp; touch tmp/restart.txt; echo 'restarted rails'" # restart a rails app
 alias log='tail -f log/development.log' # show the development log for a rails app
 alias loga="tail -f log/development.log | grep -vE '(Served asset|Started GET ./assets|^$|RailsDevTweaks)'"
 alias what?='tail -n 250 log/development.log'

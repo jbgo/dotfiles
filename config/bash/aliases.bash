@@ -31,5 +31,5 @@ alias sp='bx rspec --color'
 alias cuke='bx cucumber'
 
 # nginx
-alias rs='echo "Stopping nginx..."; pgrep nginx; for pid in $(pgrep nginx); do sudo kill $pid; done; echo "Starging nginx..."; sudo launchctl start org.nginx; sleep 1; pgrep nginx'
+alias rs='echo "Stopping nginx..."; pgrep nginx; for pid in $(pgrep nginx); do sudo kill $pid; done; sleep 2; echo "Starting nginx..."; sudo launchctl start org.nginx; sleep 1; pgrep nginx'
 alias vhosts='sudo vi /opt/nginx/conf/nginx.conf'

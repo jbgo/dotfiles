@@ -20,6 +20,8 @@ alias grmd='g rm $(g ls-files -d)' # stage all deleted files
 
 # ssh
 alias ssh-hosts='grep -E "^Host [a-zA-Z]" ~/.ssh/config'
+alias nginx_start='sudo launchctl load -F ~/Library/LaunchAgents/nginx.plist'
+alias nginx_stop='sudo launchctl unload -F ~/Library/LaunchAgents/nginx.plist'
 
 # mac os x
 alias vf='open -a Finder .' # view current directory in Finder

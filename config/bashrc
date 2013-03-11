@@ -24,6 +24,11 @@ function bashr() {
   fi
 }
 
+# homebrew's python
+export PATH=/usr/local/share/python:$PATH
+# other homebrew programs and user installed programs
+export PATH=/usr/local/bin:$PATH
+
 source ~/dotfiles/config/bash/aliases.bash
 source ~/dotfiles/config/bash/vim.bash
 source ~/dotfiles/config/bash/git-completion.bash
@@ -56,6 +61,5 @@ function nametab() {
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm  # This loads RVM into a shell session.
 [[ -s /usr/local/sbin ]] && export PATH=$PATH:/usr/local/sbin
 [[ -s $HOME/bin ]] && export PATH=$HOME/bin:$PATH
-# homebrew's python
-export PATH=/usr/local/share/python:$PATH
-export PATH=/usr/local/bin:$PATH:/Users/jordan/bin:$ANDROID_SDK/tools:$HADOOP/bin:$HADOOP/sbin
+
+export PATH=$PATH:/Users/jordan/bin:$ANDROID_SDK/tools:$HADOOP/bin:$HADOOP/sbin

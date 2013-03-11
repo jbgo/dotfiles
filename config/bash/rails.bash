@@ -39,3 +39,7 @@ function ckpass() {
   process_group_id=`ps aux | grep "PassengerHelperAgent" | grep -o -E 'root +[0-9]+' | grep -o -E '[0-9]+'`
   ps -m -g $process_group_id -o pid,ppid,pgid,%mem,rss,command
 }
+
+function bgrep() {
+  grep -R --color "$@" `bundle show --paths`
+}

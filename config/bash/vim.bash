@@ -20,6 +20,12 @@ function open_gem() {
 }
 alias og=open_gem
 
+function inspect_gem() {
+  gem_dir=`bundle show $1`
+  pushd $gem_dir
+}
+alias ig=inspect_gem
+
 # clear out pesky vim swap files
 alias rm.swp='echo "removing vim .swp files"; rm ~/.vim/backup/*.swp'
 

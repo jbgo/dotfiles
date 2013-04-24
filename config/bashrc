@@ -31,8 +31,7 @@ export PATH=/usr/local/bin:$PATH
 
 source ~/dotfiles/config/bash/aliases.bash
 source ~/dotfiles/config/bash/vim.bash
-source ~/dotfiles/config/bash/git-completion.bash
-source ~/dotfiles/config/bash/grb.bash
+source ~/dotfiles/config/bash/completion.bash
 source ~/dotfiles/config/bash/rails.bash
 source ~/dotfiles/config/bash/python.bash
 source ~/dotfiles/config/bash/ps1.bash
@@ -63,3 +62,6 @@ function nametab() {
 [[ -s $HOME/bin ]] && export PATH=$HOME/bin:$PATH
 
 export PATH=$PATH:/Users/jordan/bin:$ANDROID_SDK/tools:$HADOOP/bin:$HADOOP/sbin
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

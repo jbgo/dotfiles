@@ -30,7 +30,7 @@
   rs = reset HEAD .
   rsh = reset --hard HEAD
   s = status
-  u = pull
+  pull = pull --ff-only
   undo = reset --soft HEAD^
   who = shortlog -s
 

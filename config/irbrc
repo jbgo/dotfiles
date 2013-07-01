@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'ostruct'
 
 # List methods of an object and optionally filter by pattern
 def show_methods(o, pattern=//, options={})
@@ -28,3 +29,9 @@ def print_with_map(collection)
   end
 end
 alias :pm :print_with_map
+
+class Object
+  def imethods
+    methods.reject { |m| m.to_s.end_with?('=') } - self.class.instance_methods
+  end
+end

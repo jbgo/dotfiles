@@ -11,18 +11,18 @@ _completion_list() {
 _complete_grb() {
   if [ -d .git ]; then
     if [[ $COMP_LINE == 'grb track*' ]]; then
+      branches=`git branch -a | grep 'remotes/' | cut  -f '3' -d '/'`
+      _completion_list $branches
+    else
       branches=`git branch | cut -c 3-`
       tags=`git tag`
       _completion_list $branches $tags
-    else
-      branches=`git branch -a | grep 'remotes/' | cut  -f '3' -d '/'`
-      _completion_list $branches
     fi
   fi
 }
 
 alias grbt='grb track'
-complete -F _complete_grb_remote grbt
+complete -F _complete_grb grbt
 complete -F _complete_grb grb
 
 _complete_ssh_hosts() {

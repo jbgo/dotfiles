@@ -3,6 +3,7 @@
   b = branch
   ba = branch -a --color
   bd = branch -d
+  bt = branch --track
   bdd = branch -D
   c = commit
   cnv = commit --no-verify
@@ -22,7 +23,7 @@
   ls = log --color --stat-name-width=120
   lsw = log --stat=800,400 --color
   m = merge
-  p = push
+  p = pull
   pn = remote prune origin
   ra = rebase --abort
   rb = rebase master

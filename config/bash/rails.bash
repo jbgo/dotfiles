@@ -6,14 +6,15 @@ alias dbmigrate='bx rake db:migrate; bx rake db:test:load'
 alias dbredo='bx rake db:migrate:redo; bx rake db:test:load'
 alias work='bx rake resque:work'
 
-# Rails 3.x
-alias sr='script/rails'
+if [ -d ./script ]; then
+  # Rails 3
+  rails_script_dir=script
+else
+  # Rails 4
+  rails_script_dir=bin
+fi
 
-# Rails 2.3.x
-alias rsc='ruby script/console'
-alias rdb='ruby script/dbconsole'
-alias rg='ruby script/generate'
-alias rgm='ruby script/generate migration'
+alias sr="$rails_script_dir/rails"
 
 # filters a rails development log for page and template render times
 alias rails-perf='grep -E "(Processing|Rendered|Completed)" log/development.log'

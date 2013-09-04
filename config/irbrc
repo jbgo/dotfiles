@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'pp'
 require 'ostruct'
 
 # List methods of an object and optionally filter by pattern
@@ -35,3 +36,11 @@ class Object
     methods.reject { |m| m.to_s.end_with?('=') } - self.class.instance_methods
   end
 end
+
+def pp_that_returns_nil(o)
+  default_pp(o)
+  nil
+end
+
+alias :default_pp :pp
+alias :pp :pp_that_returns_nil

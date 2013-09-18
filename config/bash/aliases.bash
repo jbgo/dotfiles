@@ -35,3 +35,14 @@ alias cuke='bx cucumber'
 # nginx
 alias rs='echo "Stopping nginx..."; pgrep nginx; for pid in $(pgrep nginx); do sudo kill $pid; done; sleep 2; echo "Starting nginx..."; sudo launchctl start org.nginx; sleep 1; pgrep nginx'
 alias vhosts='sudo vi /opt/nginx/conf/nginx.conf'
+
+function markdown() {
+  if [ `which redcarpet` ];
+  then
+    redcarpet --render-fenced_code_blocks --render-no_intra_emphasis --render-autolink $1 > ~/.Trash/markdown.html && \
+    open ~/.Trash/markdown.html
+  else
+    echo "Please install redcarpet: gem install redcarpet"
+    return 1
+  fi
+}

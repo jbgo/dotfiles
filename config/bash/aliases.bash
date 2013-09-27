@@ -32,9 +32,9 @@ alias guard='bx guard -c'
 alias sp='bx rspec --color'
 alias cuke='bx cucumber'
 
-# nginx
-alias rs='echo "Stopping nginx..."; pgrep nginx; for pid in $(pgrep nginx); do sudo kill $pid; done; sleep 2; echo "Starting nginx..."; sudo launchctl start org.nginx; sleep 1; pgrep nginx'
-alias vhosts='sudo vi /opt/nginx/conf/nginx.conf'
+# heroku
+alias h=heroku
+alias hr= heroku run
 
 function markdown() {
   if [ `which redcarpet` ];

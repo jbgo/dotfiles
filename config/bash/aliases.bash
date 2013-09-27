@@ -34,7 +34,7 @@ alias cuke='bx cucumber'
 
 # heroku
 alias h=heroku
-alias hr= heroku run
+alias hr='heroku run'
 
 function markdown() {
   if [ `which redcarpet` ];

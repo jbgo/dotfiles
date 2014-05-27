@@ -59,3 +59,8 @@ function git_branch_wipeout() {
   git branch -d $1 && git push $remote :refs/heads/$1
 }
 alias gbw=git_branch_wipeout
+
+function wisdom() {
+  cowfile=`ruby -e 'p=\`cowsay -l\`.split("\n")[0].match(/ (\/.+):/)[1];f=\`ls -1 #{p}\`.chomp.split("\n");puts f[rand(f.size)].chomp(".cow")'`
+  fortune | cowsay -f $cowfile
+}

@@ -3,3 +3,4 @@ log/
 tmp/
 .bundle
 .sass-cache/
+tags

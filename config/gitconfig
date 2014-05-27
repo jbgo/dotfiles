@@ -16,6 +16,7 @@
   cpx = cherry-pick -x
   d = diff --color
   dc = diff --color --cached
+  fo = fetch origin
   g = gc
   l = log --color
   ld = log -p --color
@@ -28,8 +29,8 @@
   ra = rebase --abort
   rb = rebase master
   rc = rebase --continue
-  rs = reset HEAD .
-  rsh = reset --hard HEAD
+  rs = reset HEAD --
+  rshh = reset --hard HEAD
   s = status
   pull = pull --ff-only
   undo = reset --soft HEAD^
@@ -44,3 +45,6 @@
 
 [push]
   default = current
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

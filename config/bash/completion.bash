@@ -24,6 +24,7 @@ _complete_grb() {
 alias grbt='grb track'
 complete -F _complete_grb grbt
 complete -F _complete_grb grb
+complete -F _complete_grb gbw
 
 _complete_ssh_hosts() {
   if [ -f ~/.ssh/config ]; then

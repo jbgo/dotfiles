@@ -10,6 +10,7 @@ alias pjson='python -mjson.tool'
 alias vb='VBoxManage'
 alias cpkey='cat ~/.ssh/id_rsa.pub | pbcopy'
 alias til='grep -d recurse -h `date "+%m/%d"` /usr/share/calendar/'
+alias jbgo='cd ~/projects/opensource/jbgo'
 
 # git
 alias g='git'
@@ -36,6 +37,11 @@ alias cuke='bx cucumber'
 alias h=heroku
 alias hr='heroku run'
 
+# ansible
+alias an=ansible
+alias anp=ansible-playbook
+alias ang=ansible-galaxy
+
 function markdown() {
   if [ `which redcarpet` ];
   then
@@ -46,3 +52,10 @@ function markdown() {
     return 1
   fi
 }
+
+function git_branch_wipeout() {
+  remote=$2
+  if [[ ! $remote ]]; then remote=origin; fi
+  git branch -d $1 && git push $remote :refs/heads/$1
+}
+alias gbw=git_branch_wipeout

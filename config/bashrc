@@ -4,6 +4,7 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
 export HADOOP=/Users/jordan/projects/opensource/hadoop-1.0.4
 export ANDROID_SDK=/usr/local/android-sdk-macosx
 export GOPATH=$HOME/projects/gocode
+export ANSIBLE_NOCOWS=1
 
 alias dotfiles='cd ~/dotfiles'
 alias bashrc="$EDITOR ~/dotfiles/config/bashrc"

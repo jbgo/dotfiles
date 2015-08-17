@@ -1,4 +1,4 @@
-export EDITOR=vim
+export EDITOR=nvim
 export NODE_PATH=/usr/local/lib/node_modules
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
 export ANDROID_SDK=/usr/local/android-sdk-macosx

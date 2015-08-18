@@ -12,6 +12,10 @@ alias cpkey='cat ~/.ssh/id_rsa.pub | pbcopy'
 alias til='grep -d recurse -h `date "+%m/%d"` /usr/share/calendar/'
 alias jbgo='cd ~/projects/opensource/jbgo'
 
+# vim/nvim
+alias vim=nvim
+alias vi=nvim
+
 # git
 alias g='git'
 alias sg='sudo git'
@@ -63,4 +67,9 @@ alias gbw=git_branch_wipeout
 function wisdom() {
   cowfile=`ruby -e 'p=\`cowsay -l\`.split("\n")[0].match(/ (\/.+):/)[1];f=\`ls -1 #{p}\`.chomp.split("\n");puts f[rand(f.size)].chomp(".cow")'`
   fortune | cowsay -f $cowfile
+}
+
+function ct() {
+  echo generating ctags for launguage: $1
+  ctags -R --languages=$1 --exclude=.git --exclude=log --exclude=tmp
 }

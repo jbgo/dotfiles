@@ -1,7 +1,6 @@
-export EDITOR=vim
+export EDITOR=nvim
 export NODE_PATH=/usr/local/lib/node_modules
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
-export HADOOP=/Users/jordan/projects/opensource/hadoop-1.0.4
 export ANDROID_SDK=/usr/local/android-sdk-macosx
 export GOPATH=$HOME/projects/gocode
 
@@ -12,6 +11,9 @@ alias dotfiles='cd ~/dotfiles'
 alias bashrc="$EDITOR ~/dotfiles/config/bashrc"
 alias bashrl="$EDITOR ~/dotfiles/local/bashrc"
 alias rebash='source ~/.bashrc'
+
+alias rs='echo "sudo apachectl restart" && sudo apachectl restart'
+alias httpconf='cd /etc/apache2 && mvim'
 
 function bashr() {
   if [ "$1" == "list" ]; then
@@ -34,7 +36,6 @@ export PATH=/usr/local/share/python:$PATH
 export PATH=/usr/local/bin:$PATH
 
 source ~/dotfiles/config/bash/aliases.bash
-source ~/dotfiles/config/bash/vim.bash
 source ~/dotfiles/config/bash/completion.bash
 source ~/dotfiles/config/bash/rails.bash
 source ~/dotfiles/config/bash/python.bash
@@ -66,4 +67,9 @@ export rvmsudo_secure_path=1
 [[ -s /usr/local/sbin ]] && export PATH=$PATH:/usr/local/sbin
 [[ -s $HOME/bin ]] && export PATH=$HOME/bin:$PATH
 
-export PATH=$PATH:/Users/jordan/bin:/usr/local/heroku/bin:$GOPATH/bin:$ANDROID_SDK/tools:$HADOOP/bin:$HADOOP/sbin
+export PATH=/Users/jbach/bin:/Users/jbach/.rbenv/shims:/usr/local/heroku/bin:$GOPATH/bin:$ANDROID_SDK/tools:$HADOOP/bin:$HADOOP/sbin:$PATH
+
+source ~/dotfiles/config/bash/vim.bash
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

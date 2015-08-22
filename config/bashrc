@@ -62,14 +62,9 @@ function nametab() {
 # .gitignore contains an entry for dotfiles/local/
 [[ -s ~/dotfiles/local/bashrc ]] && source ~/dotfiles/local/bashrc
 
-export rvmsudo_secure_path=1
-[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm  # This loads RVM into a shell session.
-[[ -s /usr/local/sbin ]] && export PATH=$PATH:/usr/local/sbin
-[[ -s $HOME/bin ]] && export PATH=$HOME/bin:$PATH
-
-export PATH=/Users/jbach/bin:/Users/jbach/.rbenv/shims:/usr/local/heroku/bin:$GOPATH/bin:$ANDROID_SDK/tools:$HADOOP/bin:$HADOOP/sbin:$PATH
+for p in /usr/local/sbin $HOME/bin $GOPATH/bin $HOME/.rbenv/shims /usr/local/heroku/bin
+do
+  [[ -s $p ]] && export PATH=$PATH:$p
+done
 
 source ~/dotfiles/config/bash/vim.bash
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"

@@ -30,11 +30,6 @@ function bashr() {
   fi
 }
 
-# homebrew's python
-export PATH=/usr/local/share/python:$PATH
-# other homebrew programs and user installed programs
-export PATH=/usr/local/bin:$PATH
-
 source ~/dotfiles/config/bash/aliases.bash
 source ~/dotfiles/config/bash/completion.bash
 source ~/dotfiles/config/bash/rails.bash
@@ -62,9 +57,12 @@ function nametab() {
 # .gitignore contains an entry for dotfiles/local/
 [[ -s ~/dotfiles/local/bashrc ]] && source ~/dotfiles/local/bashrc
 
-for p in /usr/local/sbin $HOME/bin $GOPATH/bin $HOME/.rbenv/shims /usr/local/heroku/bin
-do
-  [[ -s $p ]] && export PATH=$PATH:$p
+# items to prepend to PATH, last item comes first in PATH
+bin_paths=(/usr/local/sbin /usr/local/bin /usr/local/heroku/bin /usr/local/share/python $GOPATH/bin $HOME/.rbenv/shims $HOME/bin)
+
+for p in ${bin_paths[*]}; do
+  echo "prepend path: $p"
+  [[ -s $p ]] && export PATH=$p:$PATH
 done
 
 source ~/dotfiles/config/bash/vim.bash

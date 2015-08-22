@@ -11,7 +11,7 @@ alias bashrl="$EDITOR ~/dotfiles/local/bashrc"
 alias rebash='source ~/.bashrc'
 
 alias rs='echo "sudo apachectl restart" && sudo apachectl restart'
-alias httpconf='cd /etc/apache2 && mvim'
+alias httpconf='cd /etc/apache2 && nvim .'
 
 function bashr() {
   if [ "$1" == "list" ]; then

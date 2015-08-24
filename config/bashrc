@@ -27,11 +27,6 @@ function bashr() {
   fi
 }
 
-# homebrew's python
-export PATH=/usr/local/share/python:$PATH
-# other homebrew programs and user installed programs
-export PATH=/usr/local/bin:$PATH
-
 source ~/dotfiles/config/bash/aliases.bash
 source ~/dotfiles/config/bash/completion.bash
 source ~/dotfiles/config/bash/rails.bash
@@ -59,14 +54,11 @@ function nametab() {
 # .gitignore contains an entry for dotfiles/local/
 [[ -s ~/dotfiles/local/bashrc ]] && source ~/dotfiles/local/bashrc
 
-export rvmsudo_secure_path=1
-[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm  # This loads RVM into a shell session.
-[[ -s /usr/local/sbin ]] && export PATH=$PATH:/usr/local/sbin
-[[ -s $HOME/bin ]] && export PATH=$HOME/bin:$PATH
+# items to prepend to PATH, last item comes first in PATH
+bin_paths=(/usr/local/sbin /usr/local/bin /usr/local/heroku/bin /usr/local/share/python $GOPATH/bin $HOME/.rbenv/shims $HOME/bin)
 
-export PATH=/Users/jbach/bin:/Users/jbach/.rbenv/shims:/usr/local/heroku/bin:$GOPATH/bin:$ANDROID_SDK/tools:$HADOOP/bin:$HADOOP/sbin:$PATH
+for p in ${bin_paths[*]}; do
+  [[ -s $p ]] && export PATH=$p:$PATH
+done
 
 source ~/dotfiles/config/bash/vim.bash
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"

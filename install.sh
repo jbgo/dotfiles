@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -e
+
 mkdir -p ~/dotfiles/local/
 touch ~/dotfiles/local/bashrc
 
@@ -27,6 +31,11 @@ for f in *; do
     fi
   fi
 done
+
+if [ `which brew` ]; then
+  # for tmux os x clipboard integration
+  brew install reattach-to-user-namespace
+fi
 
 cd ~
 source ~/.bashrc

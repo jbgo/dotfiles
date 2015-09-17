@@ -12,6 +12,9 @@ alias rebash='source ~/.bashrc'
 alias rs='echo "sudo apachectl restart" && sudo apachectl restart'
 alias httpconf='cd /etc/apache2 && nvim .'
 
+# code climate CLI https://github.com/codeclimate/codeclimate#usage
+alias cc='docker run -it --rm --env CODE_PATH="$PWD" -v "$PWD":/code -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/cc:/tmp/cc codeclimate/codeclimate'
+
 function bashr() {
   if [ "$1" == "list" ]; then
     ls -1 ~/dotfiles/config/bash/*.bash

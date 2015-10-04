@@ -17,7 +17,6 @@
   d = diff --color
   dc = diff --color --cached
   fo = fetch origin
-  g = gc
   l = log --color
   ld = log -p --color
   lp = log --color --pretty=oneline

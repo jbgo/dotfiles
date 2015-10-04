@@ -18,8 +18,9 @@ alias vi=nvim
 
 # git
 alias g='git'
-alias sg='sudo git'
-alias gs='g s' # I typically don't want to run ghostscript, I want to run git status
+alias gs='git status'
+alias gg='git grep -En'
+alias ggi='git grep -iEn'
 alias cleanwd='rm $(g ls-files -o)' # remove untracked files from working dir
 alias grmd='g rm $(g ls-files -d)' # stage all deleted files
 
@@ -45,6 +46,7 @@ alias hr='heroku run'
 alias an=ansible
 alias anp=ansible-playbook
 alias ang=ansible-galaxy
+alias ansidev='ansible-playbook -u vagrant -i hosts/development'
 
 function markdown() {
   if [ `which redcarpet` ];

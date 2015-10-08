@@ -7,7 +7,6 @@ export GOPATH=$HOME/projects/gocode
 alias dotfiles='cd ~/dotfiles'
 alias bashrc="$EDITOR ~/dotfiles/config/bashrc"
 alias bashrl="$EDITOR ~/dotfiles/local/bashrc"
-alias rebash='source ~/.bashrc'
 
 alias rs='echo "sudo apachectl restart" && sudo apachectl restart'
 alias httpconf='cd /etc/apache2 && nvim .'
@@ -29,6 +28,18 @@ function bashr() {
     bashrc
   fi
 }
+
+function rebash() {
+  if [ $1 ]; then
+    cfg=~/dotfiles/config/bash/$1\.bash
+    echo sourcing $cfg
+    source $cfg
+  else
+    echo sourcing ~/.bashrc
+    source ~/.bashrc
+  fi
+}
+alias re=rebash
 
 source ~/dotfiles/config/bash/aliases.bash
 source ~/dotfiles/config/bash/completion.bash

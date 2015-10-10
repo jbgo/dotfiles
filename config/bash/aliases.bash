@@ -80,3 +80,14 @@ function tp() {
   echo opening TP#$1
   open https://kalkomey.tpondemand.com/entity/$1
 }
+
+# show terminal color numbers
+# adapted from http://unix.stackexchange.com/questions/60968/tmux-bottom-bar-color-change
+function colors() {
+  cf=$HOME/.colors.txt
+  test -f $cf && rm $cf
+  for i in {0..255} ; do
+      printf "\x1b[38;5;${i}mcolour${i}\n" >> $cf
+  done
+  less -rf $cf
+}

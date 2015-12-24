@@ -35,7 +35,7 @@ alias vf='open -a Finder .' # view current directory in Finder
 # ruby
 alias bx='bundle exec'
 alias guard='bx guard -c'
-alias sp='bx rspec --color'
+alias sp='bx rspec'
 alias cuke='bx cucumber'
 
 # heroku

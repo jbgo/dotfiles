@@ -34,6 +34,7 @@
   pull = pull --ff-only
   undo = reset --soft HEAD^
   who = shortlog -s
+  graph = log --pretty=format:'%h %s' --graph
 
 [user]
   name = Jordan Bach

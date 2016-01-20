@@ -11,6 +11,12 @@ alias bashrl="$EDITOR ~/dotfiles/local/bashrc"
 alias rs='echo "sudo apachectl restart" && sudo apachectl restart'
 alias httpconf='cd /etc/apache2 && nvim .'
 
+if ! docker-machine ls | grep ^default.*Running; then
+  echo "docker-machine default is not running, this will take a few seconds..."
+  docker-machine start default
+  eval "$(docker-machine env default)"
+fi
+
 # code climate CLI https://github.com/codeclimate/codeclimate#usage
 alias cc='docker run -it --rm --env CODE_PATH="$PWD" -v "$PWD":/code -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/cc:/tmp/cc codeclimate/codeclimate'
 

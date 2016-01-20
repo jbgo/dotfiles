@@ -48,6 +48,10 @@ alias anp=ansible-playbook
 alias ang=ansible-galaxy
 alias ansidev='ansible-playbook -u vagrant -i hosts/development'
 
+# docker
+alias dk=docker
+alias dkc=docker-compose
+
 function markdown() {
   if [ `which redcarpet` ];
   then

@@ -51,6 +51,7 @@ alias ansidev='ansible-playbook -u vagrant -i hosts/development'
 # docker
 alias dk=docker
 alias dkc=docker-compose
+alias dkpsf="docker ps --format='name={{printf \"%-20s\" .Names}}\tstatus={{printf \"%-16s\" .Status}}\tlabels={{printf \"%-32s\" .Labels}}'"
 
 function markdown() {
   if [ `which redcarpet` ];

@@ -11,6 +11,7 @@ alias vb='VBoxManage'
 alias cpkey='cat ~/.ssh/id_rsa.pub | pbcopy'
 alias til='grep -d recurse -h `date "+%m/%d"` /usr/share/calendar/'
 alias jbgo='cd ~/projects/opensource/jbgo'
+alias pj='pbpaste | jq .'
 
 # vim/nvim
 alias vim=nvim

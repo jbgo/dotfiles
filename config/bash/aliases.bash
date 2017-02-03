@@ -1,4 +1,4 @@
-alias ls='ls -lhF'
+alias ll='ls -lhFG'
 alias tf='tail -f'
 alias tn='tail -n'
 alias grepr='grep --color -d recurse -n' # recursive grep with line numbers

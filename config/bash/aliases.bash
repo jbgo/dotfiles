@@ -82,11 +82,6 @@ function ct() {
   ctags -R --languages=$1 --exclude=.git --exclude=log --exclude=tmp
 }
 
-function tp() {
-  echo opening TP#$1
-  open https://kalkomey.tpondemand.com/entity/$1
-}
-
 function homestead() {
     ( cd ~/projects/jiboom/homestead && vagrant $* )
 }

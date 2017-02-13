@@ -17,6 +17,7 @@
   d = diff --color
   dc = diff --color --cached
   fo = fetch origin
+  fp = format-patch
   l = log --color
   ld = log -p --color
   lg = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'

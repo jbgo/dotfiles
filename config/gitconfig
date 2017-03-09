@@ -17,12 +17,15 @@
   d = diff --color
   dc = diff --color --cached
   fo = fetch origin
+  fp = format-patch
   l = log --color
   ld = log -p --color
+  lg = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
   lp = log --color --pretty=oneline
   ls = log --color --stat-name-width=120
   lsw = log --stat=800,400 --color
   m = merge
+  mt = mergetool --tool=opendiff
   p = pull
   pn = remote prune origin
   ra = rebase --abort
@@ -37,11 +40,12 @@
   graph = log --pretty=format:'%h %s' --graph
 
 [user]
-  name = Jordan Bach
-  email = jordanbach@gmail.com
+	name = Jordan Bach
+	email = jordan.bach@2dialog.com
 
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/jordanbach/.gitignore
+	quotepath = false
 
 [push]
   default = current
@@ -52,3 +56,9 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

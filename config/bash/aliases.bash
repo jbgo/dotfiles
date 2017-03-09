@@ -47,6 +47,7 @@ alias an=ansible
 alias anp=ansible-playbook
 alias ang=ansible-galaxy
 alias ansidev='ansible-playbook -u vagrant -i hosts/development'
+alias anv=ansible-vault
 
 # docker
 alias dk=docker
@@ -82,5 +83,5 @@ function ct() {
 }
 
 function homestead() {
-    ( cd ~/projects/jiboom/homestead && vagrant $* )
+    ( cd ~/projects/Homestead && vagrant $* )
 }

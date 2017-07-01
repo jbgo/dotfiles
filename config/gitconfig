@@ -41,7 +41,7 @@
 
 [user]
 	name = Jordan Bach
-	email = jordan.bach@2dialog.com
+	email = jordanbach@gmail.com
 
 [core]
 	excludesfile = /Users/jordanbach/.gitignore

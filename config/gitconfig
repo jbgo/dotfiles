@@ -1,43 +1,30 @@
 [alias]
-  a = add
-  b = branch
-  ba = branch -a --color
-  bd = branch -d
-  bt = branch --track
-  bdd = branch -D
-  c = commit
-  cnv = commit --no-verify
-  ca = commit --amend
-  cb = checkout -b
-  cm = commit -m
-  cmnv = commit --no-verify -m
-  co = checkout
-  c- = checkout -- .
-  cpx = cherry-pick -x
-  d = diff --color
-  dc = diff --color --cached
-  fo = fetch origin
-  fp = format-patch
-  l = log --color
-  ld = log -p --color
-  lg = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
-  lp = log --color --pretty=oneline
-  ls = log --color --stat-name-width=120
-  lsw = log --stat=800,400 --color
-  m = merge
-  mt = mergetool --tool=opendiff
-  p = pull
-  pn = remote prune origin
-  ra = rebase --abort
-  rb = rebase master
-  rc = rebase --continue
-  rs = reset HEAD --
-  rshh = reset --hard HEAD
-  s = status
-  pull = pull --ff-only
-  undo = reset --soft HEAD^
-  who = shortlog -s
-  graph = log --pretty=format:'%h %s' --graph
+  a   = add
+  b   = branch
+  ba  = branch -a
+  bd  = branch -d
+  bdd  = branch -D
+  c   = commit
+  ca  = commit --amend
+  cb  = checkout -b
+  cm  = commit -m
+  co  = checkout
+  d   = diff
+  dc  = diff --cached
+  fu  = commit --fixup HEAD
+  g   = grep -n -E
+  l   = log
+  ld  = log -p
+  lp  = log --pretty=oneline
+  ls  = log --stat
+  lsc = diff --cached --name-only --diff-filter=ACMRXT
+  pff = pull --ff-only
+  pr  = pull --rebase
+  pu = push -u origin
+  puo = push -u origin
+  rs  = reset
+  s   = status
+  undo = reset --soft HEAD^1
 
 [user]
 	name = Jordan Bach
